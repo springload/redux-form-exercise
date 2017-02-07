@@ -10,7 +10,7 @@ import * as actions from '../actions';
 
 // I usually declare the form name in a separate const and a the beginning of the file.
 // That way it's easier to know if you are in the right file or not for a form.
-const formName = 'blah';
+const formName = 'exercise0';
 
 // This is the validate method.
 // Redux-form offers many many ways to validate a form/field.
