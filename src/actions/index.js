@@ -20,3 +20,12 @@ export const exerciseZeroFormSubmit = (submit) => {
         },
     };
 };
+
+export const exerciseOneFormSubmit = (submit) => {
+    return {
+        type: actionTypes.EXERCISE_ONE_FORM_SUBMIT,
+        payload: {
+            number: submit.number,
+        },
+    };
+};
