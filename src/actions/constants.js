@@ -2,4 +2,5 @@ import keyMirror from 'keymirror';
 
 export default keyMirror({
     EXERCISE_ZERO_FORM_SUBMIT: null,
+    EXERCISE_TWO_FORM_SUBMIT: null,
 });

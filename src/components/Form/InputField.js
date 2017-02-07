@@ -1,3 +1,5 @@
+// Exercise 2 TODO: Modify me
+
 import React, { PropTypes } from 'react';
 
 const propTypes = {
@@ -11,7 +13,7 @@ const InputField = ({
     input,
     label,
     type,
-    meta: { touched, error },
+    meta: { touched, error, warning },
 }) => {
     return (
         <label htmlFor={input.name}>
@@ -24,6 +26,9 @@ const InputField = ({
             />
             {(touched && error) && (
                 <span style={{ color: '#d34545', marginLeft: '10px' }}>{error}</span>
+            )}
+            {(touched && warning) && (
+                <span style={{ color: 'orange', marginLeft: '10px' }}>{warning}</span>
             )}
         </label>
     );
