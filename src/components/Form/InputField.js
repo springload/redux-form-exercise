@@ -13,7 +13,7 @@ import React, { PropTypes } from 'react';
 // before sending the value to the state please check: http://redux-form.com/6.5.0/docs/ValueLifecycle.md/
 // NB: Using your own custom components for form fields is an excellent way
 // to keep your form accessible
-// Meet me in /component/Form/SelectField.js
+
 const propTypes = {
     input: PropTypes.object.isRequired,
     meta: PropTypes.object.isRequired,
@@ -46,3 +46,5 @@ const InputField = ({
 InputField.propTypes = propTypes;
 
 export default InputField;
+
+// Meet me in /component/Form/SelectField.js
