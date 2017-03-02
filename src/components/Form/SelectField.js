@@ -1,7 +1,7 @@
 // This is how I render a <select> field with redux-form
-// It's the same process than for an input field.
+// It's the same process as an input field.
 // Except we give the options as an array of objects containing a label and a value.
-// Cool. Meet me in /actions/index.js
+
 import React, { PropTypes } from 'react';
 
 const propTypes = {
@@ -46,3 +46,5 @@ const SelectField = ({
 SelectField.propTypes = propTypes;
 
 export default SelectField;
+
+// Cool. Meet me in /actions/index.js
