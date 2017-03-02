@@ -12,3 +12,5 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
+
+// And that's it! Good luck with Exercise #1!
