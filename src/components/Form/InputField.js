@@ -1,3 +1,5 @@
+// TODO: Exercise 2 Modify me
+
 // This is how I render an InputField with redux-form
 // Note that there is a possibility to just say <Field name="blah" component="input" type="text" />
 // But I prefer to have the error management inside my field component.

@@ -29,3 +29,13 @@ export const exerciseOneFormSubmit = (submit) => {
         },
     };
 };
+
+export const exerciseTwoFormSubmit = (submit) => {
+    return {
+        type: actionTypes.EXERCISE_TWO_FORM_SUBMIT,
+        payload: {
+            ticked: submit.ticked,
+            name: submit.name,
+        },
+    };
+};
