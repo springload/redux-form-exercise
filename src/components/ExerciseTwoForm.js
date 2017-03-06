@@ -26,14 +26,16 @@ const ExerciseTwoForm = ({ handleSubmit, submitSucceeded, ticked, name }) => (
                 and a checkbox (using a CheckboxField component that you have to create).<br />
                 Label for input is "Your name:" and label for checkbox is
                 "I agree with these Terms and Conditions?"<br />
-                Please make sure the name is required. It must be displayed in the input as capital
-                letters but it must be stored in lowercase in the state.<br />
+                Please make sure the name is required. It must be displayed with a "awesome" at the beginning of the string in the input.
+                But it must be stored with the "awesome" shifted to the end of the string in the state.<br />
+                For instance entering "myname" will be shown as "awesomemyname" inside the input but "mynameawesome" in the result message.<br />
                 Also raise a warning if it is not only alphabetic string.<br />
                 Note: There is no need to modify the reducers or the actions.
+                Note 2: You should check http://redux-form.com/6.5.0/docs/api/Field.md/#props-you-can-pass-to-field- for the field formatting ;)
             </p>
             <p>
                 TODO: Implement me in /components/Form/CheckboxField.js &amp;<br />
-                Modify /containers/ExerciseTwoForm.js &amp; /components/Form/InputField.js
+                Modify /components/ExerciseTwoForm.js &amp; /components/Form/InputField.js
             </p>
         </div>
         <form onSubmit={handleSubmit}>
