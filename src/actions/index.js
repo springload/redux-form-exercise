@@ -19,5 +19,13 @@ export const exerciseZeroFormSubmit = (submit) => {
         },
     };
 };
-
 // Meet me in ../reducers/exercise0.js once you've understood this file
+
+export const exerciseOneFormSubmit = (submit) => {
+    return {
+        type: actionTypes.EXERCISE_ONE_FORM_SUBMIT,
+        payload: {
+            number: submit.number,
+        },
+    };
+};

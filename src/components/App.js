@@ -1,5 +1,6 @@
 import React from 'react';
 import IntelligentExerciseZeroForm from '../containers/IntelligentExerciseZeroForm';
+import IntelligentExerciseOneForm from '../containers/IntelligentExerciseOneForm';
 
 // This is where we call the form containers
 // It works like any other containers
@@ -10,6 +11,7 @@ import IntelligentExerciseZeroForm from '../containers/IntelligentExerciseZeroFo
 const App = () => (
     <div>
         <IntelligentExerciseZeroForm />
+        <IntelligentExerciseOneForm />
     </div>
 );
 
