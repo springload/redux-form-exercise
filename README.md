@@ -18,7 +18,7 @@ I highly recommend that you have a look (if you haven't already) to the [`redux-
 To clone the project on your machine, install the required dependencies and run the server, follow these commands:
 
 ```sh
-$ git clone https://github.com/springload/redux-form-exercise.git
+$ git clone git@github.com:springload/redux-form-exercise.git
 
 $ cd redux-form-exercise
 
