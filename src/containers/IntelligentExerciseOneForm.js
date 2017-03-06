@@ -5,7 +5,8 @@ import * as actions from '../actions';
 
 const formName = 'numberToFrench';
 
-// Exercise 1 TODO: Implement validate method and use it
+// Exercise 1 TODO: Implement validate method and use it.
+// Make sure the number is not empty and between 1 and 3 (included).
 
 const mapStateToProps = (state) => {
     return {
