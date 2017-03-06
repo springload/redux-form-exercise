@@ -73,6 +73,7 @@ const ExerciseTwoForm = ({ handleSubmit, submitSucceeded, ticked, name }) => (
                 }
             </div>
         )}
+        <div style={{ marginTop: '15px', borderBottom: '3px dotted black' }} />
     </div>
 );
 

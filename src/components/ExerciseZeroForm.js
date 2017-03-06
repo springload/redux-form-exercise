@@ -75,6 +75,7 @@ const ExerciseZeroForm = ({ handleSubmit, submitSucceeded, weather, mood }) => (
                 The weather is {weather} and you are {mood} about it. Good on you!
             </div>
         )}
+        <div style={{ marginTop: '15px', borderBottom: '3px dotted black' }} />
     </div>
 );
 

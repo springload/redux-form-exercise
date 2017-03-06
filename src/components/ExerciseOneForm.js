@@ -21,7 +21,7 @@ const ExerciseOneForm = () => (
             // Result must be displayed as "[numberSubmitted] is '[frenchNumber]' in French."
             // Example: 2 is 'deux' in French.
         }
-        <hr />
+        <div style={{ marginTop: '15px', borderBottom: '3px dotted black' }} />
     </div>
 );
 
