@@ -12,8 +12,8 @@ const ExerciseThreeForm = () => (
             <p>Add some validation:</p>
             <ul>
                 <li>Both the input and text area are required</li>
-                <li>Raise a warning if the input is not only alphabetic string.</li>
-                <li>The textarea <i>must</i> be alphanumeric and allow spaces, fullstops and quotation marks. Raise an error if these conditions are not meet.</li>
+                <li>Raise a warning if the input isn't only an alphabetic string.</li>
+                <li>The textarea <i>must</i> be alphanumeric and only allow spaces, fullstops and quotation marks. Raise an error if these conditions are not meet.</li>
                 <li>Raise a warning in the textarea if the text does not contain the sentence 'This is super cool.'</li>
             </ul>
             <p>A successful form submission should show something like this:</p>
