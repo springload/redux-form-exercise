@@ -2,6 +2,7 @@ import React from 'react';
 import IntelligentExerciseZeroForm from '../containers/IntelligentExerciseZeroForm';
 import IntelligentExerciseOneForm from '../containers/IntelligentExerciseOneForm';
 import IntelligentExerciseTwoForm from '../containers/IntelligentExerciseTwoForm';
+import IntelligentExerciseThreeForm from '../containers/IntelligentExerciseThreeForm';
 
 // This is where we call the form containers
 // It works like any other containers
@@ -14,6 +15,7 @@ const App = () => (
         <IntelligentExerciseZeroForm />
         <IntelligentExerciseOneForm />
         <IntelligentExerciseTwoForm />
+        <IntelligentExerciseThreeForm />
     </div>
 );
 
