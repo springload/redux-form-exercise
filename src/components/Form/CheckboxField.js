@@ -1,5 +1,3 @@
-// TODO: Exercise 2 Implement me
-
 import React, { PropTypes } from 'react';
 
 const propTypes = {
@@ -13,10 +11,8 @@ const CheckboxField = ({
     input,
     label,
     type,
-    meta,
-    meta: { touched, error, warning },
+    meta: { touched, error },
 }) => {
-    console.log(meta);
     return (
         <label htmlFor={input.name}>
             {label}
