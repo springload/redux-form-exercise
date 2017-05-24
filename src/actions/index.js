@@ -39,3 +39,13 @@ export const exerciseTwoFormSubmit = (submit) => {
         },
     };
 };
+
+export const exerciseThreeFormSubmit = (submit) => {
+    return {
+        type: actionTypes.EXERCISE_THREE_FORM_SUBMIT,
+        payload: {
+            text: submit.text,
+            name: submit.name,
+        },
+    };
+};

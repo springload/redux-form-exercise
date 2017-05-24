@@ -7,16 +7,16 @@ const propTypes = {
     type: PropTypes.string.isRequired,
 };
 
-const CheckboxField = ({
+const InputField = ({
     input,
     label,
     type,
-    meta: { touched, error },
+    meta: { touched, error, warning },
 }) => {
     return (
         <label htmlFor={input.name}>
             {label}
-            <input
+            <textarea
                 {...input}
                 id={input.name}
                 type={type}
@@ -25,10 +25,15 @@ const CheckboxField = ({
             {(touched && error) && (
                 <span style={{ color: '#d34545', marginLeft: '10px' }}>{error}</span>
             )}
+            {(touched && warning) && (
+                <span style={{ color: '#d34545', marginLeft: '10px' }}>{warning}</span>
+            )}
         </label>
     );
 };
 
-CheckboxField.propTypes = propTypes;
+InputField.propTypes = propTypes;
 
-export default CheckboxField;
+export default InputField;
+
+// Meet me in /component/Form/SelectField.js
