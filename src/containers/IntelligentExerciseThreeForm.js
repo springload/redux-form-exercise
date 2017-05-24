@@ -9,6 +9,9 @@ const validate = (values) => {
     const errors = {};
 
     if (values.name === '') { errors.name = 'Required'; }
+    if (values.text === '') { errors.text = 'Required'; }
+    const regex = new RegExp(/^[A-z0-9."` ]+$/);
+    if (values.text && regex.test(values.text) === false) { errors.text = 'You can only use numbers, letters, spaces, quote marks and full stops'; }
 
     return errors;
 };

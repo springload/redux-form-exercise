@@ -16,7 +16,7 @@ const InputField = ({
     return (
         <label htmlFor={input.name}>
             {label}
-            <input
+            <textarea
                 {...input}
                 id={input.name}
                 type={type}
