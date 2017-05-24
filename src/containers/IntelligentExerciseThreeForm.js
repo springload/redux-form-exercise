@@ -7,11 +7,17 @@ const formName = 'exercise3';
 
 const validate = (values) => {
     const errors = {};
+    const regex = new RegExp(/^[A-z0-9."` ]+$/);
+
+    const coolText = new RegExp(/(This is super cool)/);
 
     if (values.name === '') { errors.name = 'Required'; }
     if (values.text === '') { errors.text = 'Required'; }
-    const regex = new RegExp(/^[A-z0-9."` ]+$/);
+
     if (values.text && regex.test(values.text) === false) { errors.text = 'You can only use numbers, letters, spaces, quote marks and full stops'; }
+
+    if (values.text && coolText.test(values.text) === false) { errors.text = 'You need to have This is super cool in your text'; }
+
 
     return errors;
 };
