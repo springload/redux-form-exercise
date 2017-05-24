@@ -1,9 +1,24 @@
-// TODO: Exercise 3 Modify me
+// TODO: Exercise 2 Modify me
 
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { Field } from 'redux-form';
+import InputField from './Form/InputField';
+import TextField from './Form/TextField';
+
+const propTypes = {
+    handleSubmit: PropTypes.func.isRequired,
+    submitSucceeded: PropTypes.bool.isRequired,
+    name: PropTypes.string,
+    text: PropTypes.string,
+};
+
+const defaultProps = {
+    text: '',
+    name: '',
+};
 
 
-const ExerciseThreeForm = () => (
+const ExerciseThreeForm = ({ handleSubmit, submitSucceeded, name, text }) => (
     <div>
         <div>
             <h3>Exercise 3</h3>
@@ -25,10 +40,40 @@ const ExerciseThreeForm = () => (
                 TODO: Implement me in actions, reducers, containers, /components/Form/TextareaField.js &amp; modify /components/ExerciseThreeForm.js
             </p>
         </div>
-        {
-            // Add your form here...
-        }
+        <form onSubmit={handleSubmit}>
+            <fieldset>
+                <div>
+                    <div style={{ marginBottom: '10px' }}>
+                        <Field
+                            name="name"
+                            type="text"
+                            component={InputField}
+                            label="Your name:"
+                        />
+                    </div>
+                    <div style={{ marginBottom: '10px' }}>
+                        <Field
+                            name="text"
+                            type="textfield"
+                            component={TextField}
+                            label="Your text:"
+                        />
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+        {submitSucceeded && (
+            <div style={{ marginLeft: '10px', marginTop: '10px', color: 'green' }}>
+                <p>{`${name || 'Unnamed'} has written this:` }</p>
+                <p>{`${text}`}</p>
+            </div>
+        )}
     </div>
 );
+
+
+ExerciseThreeForm.propTypes = propTypes;
+ExerciseThreeForm.defaultProps = defaultProps;
 
 export default ExerciseThreeForm;

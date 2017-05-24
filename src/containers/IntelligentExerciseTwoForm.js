@@ -40,8 +40,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const IntelligentExerciseTwoForm = reduxForm({
     form: formName,
-    validate,
-    warn,
+    validate: validate,
+    warn: warn,
 })(ExerciseTwoForm);
 
 export default connect(

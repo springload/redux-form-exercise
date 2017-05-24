@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { Field } from 'redux-form';
+import InputField from './Form/InputField';
 
-const propTypes = {};
+const propTypes = {
+    handleSubmit: PropTypes.func.isRequired,
+    submitSucceeded: PropTypes.bool.isRequired,
+    numberSubmitted: PropTypes.string,
+    frenchNumber: PropTypes.string,
+};
 
-const defaultProps = {};
+const defaultProps = {
+    number: '',
+};
 
-const ExerciseOneForm = () => (
+
+const ExerciseOneForm = ({ handleSubmit, submitSucceeded, numberSubmitted, frenchNumber }) => (
     <div>
         <div>
             <h3>Exercise 1</h3>
@@ -16,6 +26,24 @@ const ExerciseOneForm = () => (
                 <i>TODO: Implement form in /components/ExerciseOneForm.js &amp; /containers/IntelligentExerciseOneForm.js</i>
             </p>
         </div>
+        <form onSubmit={handleSubmit}>
+            <fieldset>
+                <div>
+                    <Field
+                        name="number"
+                        component={InputField} // Type of component to render
+                        type="text"
+                        label="Choose a number between 1 and 3"
+                    />
+                </div>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+        {submitSucceeded && (
+            <div style={{ marginLeft: '10px', marginTop: '10px', color: 'green' }}>
+                The number {numberSubmitted} is {frenchNumber} in French
+            </div>
+        )}
         {
             // Add your form here...
             // Result must be displayed as "[numberSubmitted] is '[frenchNumber]' in French."
