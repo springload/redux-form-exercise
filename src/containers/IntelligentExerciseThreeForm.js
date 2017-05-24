@@ -9,14 +9,10 @@ const validate = (values) => {
     const errors = {};
     const regex = new RegExp(/^[A-z0-9."` ]+$/);
 
-    const coolText = new RegExp(/(This is super cool)/);
-
     if (values.name === '') { errors.name = 'Required'; }
     if (values.text === '') { errors.text = 'Required'; }
 
     if (values.text && regex.test(values.text) === false) { errors.text = 'You can only use numbers, letters, spaces, quote marks and full stops'; }
-
-    if (values.text && coolText.test(values.text) === false) { errors.text = 'You need to have This is super cool in your text'; }
 
 
     return errors;
@@ -27,6 +23,9 @@ const warn = (values) => {
 
     const regex = new RegExp(/^[A-z]+$/);
     if (values.name && regex.test(values.name) === false) { warnings.name = 'Name should be only alphabetical'; }
+
+    const coolText = new RegExp(/(This is super cool)/);
+    if (values.text && coolText.test(values.text) === false) { warnings.text = 'You need to have This is super cool in your text'; }
 
     return warnings;
 };
